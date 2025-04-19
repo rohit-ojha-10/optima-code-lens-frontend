@@ -26,7 +26,7 @@ export default function Dashboard() {
     setLoading(true)
     setError("")
     try {
-      const response = await axios.get(`http://localhost:5000/api/repos/${username}`)
+      const response = await axios.get(`https://optima-code-lens-backend.onrender.com/api/repos/${username}`)
       setRepos(response.data)
     } catch (err) {
       setError("Failed to fetch repositories. Please try again.")

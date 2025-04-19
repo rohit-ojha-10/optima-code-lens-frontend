@@ -39,7 +39,7 @@ export default function AnalysisPage() {
       setLoading(true)
       setError("")
       try {
-        const response = await axios.post("http://localhost:5000/api/analyze", {
+        const response = await axios.post("https://optima-code-lens-backend.onrender.com/api/analyze", {
           repoUrl: `${owner}/${repo}`
         })
         setAnalysis(response.data)
